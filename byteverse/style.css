@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  font-family: "Space Mono",monospace ;
+  background-color: whitesmoke;
+}
+
+.navbar {
+  position: relative;
+  z-index: 99;
+  overflow: hidden;
+  background-color: #fff1d0; /* Background color of the navbar */
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: black; /* Text color of the links */
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: #F0C808; /* Background color of the link on hover */
+}
+#blob {
+  background: linear-gradient( 58.2deg,  rgba(40,91,212,0.73) -3%, rgba(171,53,163,0.45) 49.3%, rgba(255,204,112,0.37) 97.7% );;
+  position: fixed;
+  width: 200px; /* Set width */
+  height: 200px; /* Set height */
+  border-radius: 50%; /* Make it round */
+  pointer-events: none; /* Allow mouse events to pass through */
+  z-index: 1;
+  animation: rotate 20s infinite;
+  filter: blur(70px);
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg) scale(1, 1.5);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+#blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+#play {
+    font-size: 35;
+ height: 50px;
+ width: 100px;
+ background-color:rgba(171,53,163,0.45) ;
+ cursor: pointer;
+ z-index: 3;
+ display: block;
+ border-radius: 10%;
+  }
+  #play:hover {
+    background-color: rgba(243, 145, 160); 
+  }
+  #game{
+    height: 100%;
+    width: 100%;
+    display: none;
+    background-color: black;
+    z-index: 999;
+  }
+
